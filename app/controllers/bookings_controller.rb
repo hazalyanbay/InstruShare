@@ -7,7 +7,7 @@ class BookingsController < ApplicationController
   def create
     @instrument = Instrument.find(params[:instrument_id])
     @booking = Booking.new(booking_params)
-    @booking.user = current_user
+    @booking.user = User.first
     @booking.instrument = @instrument
 
     respond_to do |format|
