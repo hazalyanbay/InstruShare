@@ -34,6 +34,4 @@ skip_before_action :authenticate_user!, only: :index
   def instrument_params
     params.require(:instrument).permit(:style, :description, :location, :rate, photos: [])
   end
-
-  
 end

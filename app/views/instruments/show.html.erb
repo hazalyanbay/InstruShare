@@ -6,6 +6,10 @@
 <p><%= @instrument.location %></p>
 <p><%= @instrument.rate %></p>
 
+<div class="container">
+  <%= @instrument.bookings.reviews.each %>
+</div>
+
 <%= link_to "Back to list", instruments_path, class: "btn btn-success" %>
 
 
