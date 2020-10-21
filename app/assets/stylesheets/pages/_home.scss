@@ -1,1 +1,42 @@
 // Specific CSS for your home-page
+.banner {
+    background-image: url(https://i.hizliresim.com/n0fVO5.png);
+    background-size: cover;
+    background-position: center;
+    padding: 200px 0;
+}
+
+h1 {
+    color: #f0754f;
+    font-size: 1.5rem;
+}
+
+h1 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+.banner p {
+    color: white;
+    opacity: .7;
+    font-size: 20px;
+}
+
+
+.card img {
+    height: 300px;
+}
+
+.card {
+    width: 400px;
+    border-radius: 3px;
+    box-shadow: 0 0 5px rgb(230,230,230);
+    text-align: center;
+    padding: 20px;
+    border: 1px solid rgb(230,230,230);
+}
