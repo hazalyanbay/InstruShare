@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
 User.destroy_all
 Instrument.destroy_all
 Booking.destroy_all
@@ -21,3 +22,6 @@ Instrument.create(style: 'guitar', rate: 10, location: 'Istanbul', description: 
 puts Instrument.count
 Booking.create(user: hazal, instrument: guitar )
 #Review.create(content: "Great!", booking_id:)
+
+
+
