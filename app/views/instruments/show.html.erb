@@ -1,3 +1,6 @@
+<% @instrument.photos.each do |photo| %>
+  <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+<% end %>
 <h2><%= @instrument.style %></h2>
 <p><%= @instrument.description %></p>
 <p><%= @instrument.location %></p>

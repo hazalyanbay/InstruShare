@@ -1,13 +1,10 @@
 <div class="container mt-5">
   <%= simple_form_for(@instrument) do |f| %>
-    <%= f.label :style %>
-    <%= f.text_field :style %>
-    <%= f.label :description %>
-    <%= f.text_field :description %>
-    <%= f.label :location %>
-    <%= f.text_field :location %>
-    <%= f.label :rate %>
-    <%= f.text_field :rate %>
+    <%= f.input :style, collection: Instrument.styles %>
+    <%= f.input :description %>
+    <%= f.input :location %>
+    <%= f.input :rate %>
+    <%= f.input :photos, as: :file, input_html: { multiple: true } %>
     <%= f.submit  %>
   <% end %>
 </div>

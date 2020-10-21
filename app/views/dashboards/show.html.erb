@@ -1,5 +1,6 @@
 <div class="container">
   <% @user_bookings.each do |booking| %>
+    <% booking.instrument.photos.first %>
     <h2><%= booking.instrument.style %></h2>
     <h4><%= booking.instrument.rate %></h4>
     <h4><%= booking.instrument.location %></h4>
