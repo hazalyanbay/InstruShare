@@ -1,5 +1,5 @@
 class InstrumentsController < ApplicationController
-before_action :authenticate_user!, only: :index
+skip_before_action :authenticate_user!, only: :index
   def index
     @instruments = Instrument.all
   end
@@ -20,10 +20,6 @@ before_action :authenticate_user!, only: :index
     else
       render :new
     end
-  end
-
-  def edit
-    @instrument = Instrument.find(params["id"])
   end
 
   def update
