@@ -6,5 +6,11 @@ Rails.application.routes.draw do
   resources :instruments do
     resources :bookings, only: [:new, :create]
   end
+
  resources :bookings, only: [:show]
+  resource :dashboard, only: :show
+
 end
+
+
+
