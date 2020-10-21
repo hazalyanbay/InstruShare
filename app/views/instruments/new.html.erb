@@ -1,0 +1,13 @@
+<div class="container mt-5">
+  <%= simple_form_for(@instrument) do |f| %>
+    <%= f.label :style %>
+    <%= f.text_field :style %>
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+    <%= f.label :location %>
+    <%= f.text_field :location %>
+    <%= f.label :rate %>
+    <%= f.text_field :rate %>
+    <%= f.submit  %>
+  <% end %>
+</div>
