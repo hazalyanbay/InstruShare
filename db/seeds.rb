@@ -5,8 +5,23 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Booking.create!(
-  start_time: 23,
-  end_time: 24,
-  total_price: 30
-)
+
+User.destroy_all
+Instrument.destroy_all
+Booking.destroy_all
+
+sam = User.create(name: 'Sam', email: 'parnik74@yandex.ru', password: '123456')
+hazal = User.create(name: 'Hazal', email: 'hazal@gamil.com', password: '555555')
+guitar = Instrument.create(style: 'guitar', rate: 10, location: 'Istanbul', description: 'Wow guitar', user: sam )
+
+Instrument.create(style: 'guitar', rate: 10, location: 'Istanbul', description: 'Wow guitar', user: sam )
+Instrument.create(style: 'guitar', rate: 10, location: 'Istanbul', description: 'Wow guitar', user: sam )
+Instrument.create(style: 'guitar', rate: 10, location: 'Istanbul', description: 'Wow guitar', user: sam )
+Instrument.create(style: 'guitar', rate: 10, location: 'Istanbul', description: 'Wow guitar', user: sam )
+Instrument.create(style: 'guitar', rate: 10, location: 'Istanbul', description: 'Wow guitar', user: sam )
+puts Instrument.count
+Booking.create(user: hazal, instrument: guitar )
+#Review.create(content: "Great!", booking_id:)
+
+
+
