@@ -1,7 +1,15 @@
 class InstrumentsController < ApplicationController
-skip_before_action :authenticate_user!, only: :index
+  skip_before_action :authenticate_user!, only: :index
   def index
     @instruments = Instrument.all
+
+    @markers = @instruments.geocoded.map do |instrument|
+      {
+        lat: instrument.latitude,
+        lng: instrument.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { instrument: instrument })
+      }
+    end
   end
 
   def show 

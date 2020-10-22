@@ -5,9 +5,11 @@ class Instrument < ApplicationRecord
   validates :description, length: { minimum: 5, maximum: 700 }
   belongs_to :user
   has_many_attached :photos
+  geocoded_by :location
+  after_validation :geocode, if: :will_save_change_to_location?
 
   
-  def self.styles 
-    ["acoustic guitar", "electric guitar", "drums", "ukulele", "flute"]
+  def self.styles
+    ["Acoustic Guitar", "Electric Guitar", "Drum Kit", "Ukulele", "Flute", "Violin"]
   end
 end
