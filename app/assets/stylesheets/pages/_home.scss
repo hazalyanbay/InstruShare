@@ -5,7 +5,7 @@
 }
 
 .banner h1 {
-  color: white;
+  color: #ff5f10;
 }
 
 .banner p {
@@ -22,6 +22,7 @@
 }
 // Specific CSS for your home-page
 .card {
+    background-color: #d3d4d4;
     width: 500px;
     border-radius: 3px;
     box-shadow: 0 0 5px #ff5f10;
@@ -41,4 +42,12 @@ user agent stylesheet
 
 div {
     display: block;
+}
+
+a {
+  color: #ff5824;
+}
+
+a:hover {
+  color: #aaaaaa;
 }
