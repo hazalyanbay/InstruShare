@@ -5,9 +5,12 @@
 <p><%= @instrument.description %></p>
 <p><%= @instrument.location %></p>
 <p><%= @instrument.rate %></p>
+<%= link_to "Book", new_instrument_booking_path(@instrument), class: "btn btn-primary" %>
 
 <div class="container">
-  <%= @instrument.bookings.reviews.each %>
+  <% @instrument.reviews.each do |review| %>
+  <%= review.content %>
+  <% end %>
 </div>
 
 <%= link_to "Back to list", instruments_path, class: "btn btn-success" %>

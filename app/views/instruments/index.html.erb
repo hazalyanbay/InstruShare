@@ -13,7 +13,7 @@
     <div class="card-body">
       <h5 class="card-title"><%= instrument.style %></h5>
       <p class="card-text"><%= instrument.description %></p>
-      <a href="#" class="btn btn-primary">Rent now</a>
+     <%= link_to "See More", instrument_path(instrument)  %>
     </div>
   </div>
 <% end %>
