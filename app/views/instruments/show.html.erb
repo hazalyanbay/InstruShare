@@ -26,7 +26,9 @@
       <p><%= @instrument.description %></p>
       <p><%= @instrument.location %></p>
       <p><%= @instrument.rate %></p>
-      <% if @instrument.user = current_user %>
+      <%= current_user.email %>
+      <%= @instrument.user.email %>
+      <% if @instrument.user == current_user %>
         <%= link_to "Edit", edit_instrument_path(@instrument), class: "btn btn-primary" %>
       <% else %>
         <%= link_to "Book", new_instrument_booking_path(@instrument), class: "btn btn-primary" %>
