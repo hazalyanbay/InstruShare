@@ -1,9 +1,36 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1588161543631-89e74f5b2c42?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80)">
+  <div class="container">
+    <h1>InstruShare</h1>
+    <p>Rent musical instruments and share them!</p>
+  </div>
+</div>
 
 
-<div class="container mt-3 col-8">
-  <h2>You are confirmed! </h2>
-  <h1>You booked from <%= @booking.start_time %></h1>
-  <h1>to <%= @booking.end_time %> and you will charged </h1>
-  <h1>$<%= @booking.total_price %></h1>
-  <%= link_to "Go to the home page", root_path, class: "btn btn-primary" %>
+
+
+
+  <div class="container">
+    <div class="cards mt-3">
+       <div class="card mx-auto" style="width: 450px;">
+          <h2>You are confirmed! </h2>
+          <h1>You booked from <%= @booking.start_time %></h1>
+          <h1>to <%= @booking.end_time %> and you will charged </h1>
+          <h1><%= @booking.total_price %></h1>
+          <%= link_to "Go to the home page", root_path, class: "btn btn-primary" %>
+    </div>
+    </div>
+  </div>
+
+
+  <div class="footer">
+  <div class="footer-links">
+    <a href="#"><i class="fab fa-github"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+  </div>
+  <div class="footer-copyright">
+     This is our first job and we did it with <i class="fas fa-heart"></i>
+  </div>
 </div>

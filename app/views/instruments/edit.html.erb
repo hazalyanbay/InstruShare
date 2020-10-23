@@ -1,15 +1,27 @@
 <div class="container mt-5">
-  <div class="row justify-content-center">
-    <%= simple_form_for(@instrument) do |f| %>
-      <%= f.label :style %>
-      <%= f.text_field :style %>
-      <%= f.label :description %>
-      <%= f.text_field :description %>
-      <%= f.label :location %>
-      <%= f.text_field :location %>
-      <%= f.label :rate %>
-      <%= f.text_field :rate %>
-      <%= f.submit %>
-    <% end %>
+
+  <%= simple_form_for(@instrument) do |f| %>
+    <%= f.label :style %>
+    <%= f.text_field :style %>
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+    <%= f.label :location %>
+    <%= f.text_field :location %>
+    <%= f.label :rate %>
+    <%= f.text_field :rate %>
+    <%= f.submit %>
+  <% end %>
+</div>
+
+  <div class="footer">
+  <div class="footer-links">
+    <a href="#"><i class="fab fa-github"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+  </div>
+  <div class="footer-copyright">
+     This is our first job and we did it with <i class="fas fa-heart"></i>
   </div>
 </div>
