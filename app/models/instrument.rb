@@ -13,6 +13,6 @@ class Instrument < ApplicationRecord
 
   
   def self.styles
-    ["Acoustic Guitar", "Electric Guitar", "Drum Kit", "Ukulele", "Flute", "Violin"]
+    ["Acoustic Guitar", "Electric Guitar", "Drum Kit", "Ukulele", "Flute", "Violin", "Trumpet", "Trambone", "Bugle"]
   end
 end
