@@ -3,6 +3,7 @@
     <%= f.input :style, collection: Instrument.styles %>
     <%= f.input :description %>
     <%= f.input :location %>
+    <%= f.hint 'Please give price in USD/day' %>
     <%= f.input :rate %>
     <%= f.input :photos, as: :file, input_html: { multiple: true } %>
   <%= f.submit  %>

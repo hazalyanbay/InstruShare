@@ -9,7 +9,6 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.user = current_user
     @booking.instrument = @instrument
-
     respond_to do |format|
       if @booking.save
         format.html { redirect_to @booking, notice: 'Booking was successfully created.' }
@@ -17,6 +16,13 @@ class BookingsController < ApplicationController
         format.html { render :new }
       end
     end
+  end
+
+  def update
+    @booking = Booking.find(params[:id])
+    @booking.update(booking_params)
+
+    redirect_to @booking_path
   end
 
   def show
