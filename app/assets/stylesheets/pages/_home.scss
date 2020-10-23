@@ -3,26 +3,23 @@
   background-position: center;
   padding: 200px 0;
 }
-
 .banner h1 {
   color: #ff5f10;
 }
-
 .banner p {
   color: white;
   opacity: .7;
   font-size: 20px;
 }
-
 .banner {
     background-image: url(https://i.hizliresim.com/r7dD4G.png);
     background-size: cover;
     background-position: center;
     padding: 200px 0;
 }
-// Specific CSS for your home-page
+
 .card {
-    background-color: #d3d4d4;
+    background-color: #ffffff;
     width: 500px;
     border-radius: 3px;
     box-shadow: 0 0 5px #ff5f10;
@@ -30,24 +27,156 @@
     padding: 20px;
     border: 1px solid rgb(230,230,230);
 }
-
-
 .cards {
     display: flex;
     justify-content: space-between;
     margin-bottom: 30px;
 }
 user agent stylesheet
-
-
 div {
     display: block;
 }
-
 a {
   color: #ff5824;
 }
-
 a:hover {
   color: #aaaaaa;
+}
+
+.slider-wrapper{
+  position: relative;
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+}
+
+.img-bir, .img-iki, .img-uc, .img-dort,.img-bes{
+  position: absolute;
+  width:400px;
+  height:300px;
+}
+
+.img-bir{left: 180px;}
+.img-iki{left: 1080px;}
+.img-uc{left: 2080px;}
+.img-dort{left: 3080px;}
+.img-bes{left: 4080px;}
+
+#slider-wrapper > .slider{
+  position: absolute;
+  left:0px;
+  width: 2000px;
+  height: 400px;
+  -webkit-animation-duration: 15s;
+  -webkit-animation-name: sliders;
+  -webkit-animation-iteration-count:infinite;
+  -moz-animation-duration: 15s;
+  -moz-animation-name: sliders;
+  -moz-animation-iteration-count:infinite;
+  -ms-animation-duration: 15s;
+  -ms-animation-name: sliders;
+  -ms-animation-iteration-count:infinite;
+  animation-duration: 15s;
+  animation-iteration-count:infinite;
+
+}
+
+
+#slider-wrapper > .slider:hover{
+-webkit-animation-play-state:paused;
+}
+
+#slider-wrapper > .slider > a > span{
+  position:absolute;
+  background:#333;
+  color:white;
+  left:0;
+  top:80%;
+  padding:15px 30px;
+  display:table;
+}
+#slider-wrapper a{
+   font-size:18px;
+   font-family:Arial;
+}
+
+@-webkit-keyframes sliders{
+  0% {left:0px;}
+  10% {left:0px;}
+  20% {left:-700px;}
+  30% {left:-700px;}
+  40% {left:-1400px;}
+  50% {left:-1400px;}
+  60% {left:-2100px;}
+  70% {left:-2100px;}
+  80% {left:-2800px;}
+  90% {left:-2800px;}
+}
+@-moz-keyframes sliders{
+  0% {left:0px;}
+  10% {left:0px;}
+  20% {left:-700px;}
+  30% {left:-700px;}
+  40% {left:-1400px;}
+  50% {left:-1400px;}
+  60% {left:-2100px;}
+  70% {left:-2100px;}
+  80% {left:-2800px;}
+  90% {left:-2800px;}
+}
+@-ms-keyframes sliders {
+  0% {left:0px;}
+  10% {left:0px;}
+  20% {left:-700px;}
+  30% {left:-700px;}
+  40% {left:-1400px;}
+  50% {left:-1400px;}
+  60% {left:-2100px;}
+  70% {left:-2100px;}
+  80% {left:-2800px;}
+  90% {left:-2800px;}
+}
+@keyframes sliders{
+  0% {left:0px;}
+  10% {left:0px;}
+  20% {left:-700px;}
+  30% {left:-700px;}
+  40% {left:-1400px;}
+  50% {left:-1400px;}
+  60% {left:-2100px;}
+  70% {left:-2100px;}
+  80% {left:-2800px;}
+  90% {left:-2800px;}
+}
+.footer {
+  background: #F4F4F4;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  padding: 0px 50px;
+  color: rgba(0,0,0,0.3);
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+}
+
+.footer-links:hover {
+   color: #ff5824;
+}
+.footer-links a {
+  color: black;
+  opacity: 0.15;
+  text-decoration: none;
+  font-size: 24px;
+  padding: 0px 10px;
+}
+.footer-links a:hover {
+  color: #ff5824;
+  opacity: 1;
+}
+.footer .fa-heart {
+  color: #ff5824;
 }
