@@ -18,6 +18,7 @@
           <p><%= booking.review.content %></p>
           <% end %>
         </div>
+        <%= link_to "See details", booking_path(booking), class: "btn btn-primary" %>
       </div>
     <% end %>
 

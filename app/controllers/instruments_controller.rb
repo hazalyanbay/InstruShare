@@ -41,6 +41,14 @@ class InstrumentsController < ApplicationController
     redirect_to instrument_path(@instrument)
   end
 
+  def destroy
+    @instrument = Instrument.find(params["id"])
+    @instrument.user = current_user
+    @instrument.destroy
+
+    redirect_to instrument_path
+  end
+
   private
 
   def instrument_params
