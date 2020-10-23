@@ -1,8 +1,27 @@
+
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1511379938547-c1f69419868d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80)">
   <div class="container">
     <h1>InstruShare</h1>
     <p>Rent musical instruments and share them!</p>
   </div>
+
+<% @instrument.photos.each do |photo| %>
+  <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+<% end %>
+<h2><%= @instrument.style %></h2>
+<p><%= @instrument.description %></p>
+<p><%= @instrument.location %></p>
+<p><%= @instrument.rate %></p>
+<% if @instrument.user == current_user%>
+  <%= link_to "Edit", edit_instrument_path(@instrument), class: "btn btn-primary" %>
+<% else %>
+  <%= link_to "Book", new_instrument_booking_path(@instrument), class: "btn btn-primary" %>
+<% end %>
+
+<div class="container">
+  <% @instrument.reviews.each do |review| %>
+  <%= review.content %>
+  <% end %>
 </div>
 
 

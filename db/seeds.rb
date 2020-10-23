@@ -15,10 +15,7 @@ hazal = User.create(name: 'Hazal', email: 'hazal@gamil.com', password: '555555')
 guitar = Instrument.create(style: 'guitar', rate: 10, location: 'Istanbul', description: 'Wow guitar', user: sam )
 
 Instrument.create(style: 'guitar', rate: 10, location: 'Istanbul', description: 'Wow guitar', user: sam )
-Instrument.create(style: 'guitar', rate: 10, location: 'Istanbul', description: 'Wow guitar', user: sam )
-Instrument.create(style: 'guitar', rate: 10, location: 'Istanbul', description: 'Wow guitar', user: sam )
-Instrument.create(style: 'guitar', rate: 10, location: 'Istanbul', description: 'Wow guitar', user: sam )
-Instrument.create(style: 'guitar', rate: 10, location: 'Istanbul', description: 'Wow guitar', user: sam )
+
 puts Instrument.count
 Booking.create(user: hazal, instrument: guitar )
 #Review.create(content: "Great!", booking_id:)
