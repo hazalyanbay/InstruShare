@@ -26,8 +26,11 @@
       <p><%= @instrument.description %></p>
       <p><%= @instrument.location %></p>
       <p><%= @instrument.rate %></p>
-      <%= link_to "Book", new_instrument_booking_path(@instrument), class: "btn btn-primary" %>
-
+      <% if @instrument.user = current_user %>
+        <%= link_to "Edit", edit_instrument_path(@instrument), class: "btn btn-primary" %>
+      <% else %>
+        <%= link_to "Book", new_instrument_booking_path(@instrument), class: "btn btn-primary" %>
+      <% end %>
       <div class="container">
         <% @instrument.reviews.each do |review| %>
         <%= review.content %>
